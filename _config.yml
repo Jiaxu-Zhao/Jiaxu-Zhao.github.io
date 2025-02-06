@@ -13,15 +13,15 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: "Tristan Tomilin"
+title: "Jiaxu Zhao"
 description: "My research and projects"
 baseurl: "" # Leave this empty for GitHub Pages
 url: "https://ttomilin.github.io"
 theme: jekyll-theme-minimal
 author:
-  name: "Tristan Tomilin"
-  email: "t.tomilin@tue.nl"
-  github: "https://github.com/TTomilin"
+  name: "Jiaxu Zhao"
+  email: "j.zhao@tue.nl"
+  github: "https://github.com/zhao1402072392"
 
 plugins:
   - jekyll-feed
