@@ -1532,3 +1532,8 @@ section,
   color: #0563bb;  /* Match resume title color */
 }
 
+.news-subitem {
+  display: block;
+  margin-left: 7em;
+}
+
