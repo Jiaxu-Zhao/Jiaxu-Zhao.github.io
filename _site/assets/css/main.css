@@ -1523,3 +1523,12 @@ section,
   margin-right: 8px;
   color: var(--accent-color);
 }
+
+/* Custom styling to match resume section titles */
+#service .resume-item h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #0563bb;  /* Match resume title color */
+}
+

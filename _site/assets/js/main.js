@@ -227,3 +227,24 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+document.addEventListener("DOMContentLoaded", function () {
+  const oldNewsItems = document.querySelectorAll(".old-news");
+  const toggleButton = document.getElementById("toggle-news");
+  let expanded = false;
+
+  function updateVisibility() {
+    oldNewsItems.forEach(item => {
+      item.style.display = expanded ? "block" : "none";
+    });
+    toggleButton.innerText = expanded ? "Show Less" : "Show More";
+  }
+
+  toggleButton.addEventListener("click", () => {
+    expanded = !expanded;
+    updateVisibility();
+  });
+
+  // 初始隐藏
+  updateVisibility();
+});
