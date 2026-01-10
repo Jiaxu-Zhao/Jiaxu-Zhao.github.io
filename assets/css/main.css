@@ -1547,21 +1547,29 @@ section,
   margin-top: 8px;
   overflow: hidden;
   width: 100%;
+  max-width: 280px;   /* 控制滑带宽度 */
+  margin-left: auto;
+  margin-right: auto;
 }
+
 
 .partner-logos .logo-strip {
   display: flex;
   gap: 20px;
   align-items: center;
-  animation: partner-scroll 18s linear infinite;
+  animation: partner-scroll 108s linear infinite;
 }
 
 .partner-logos img {
-  height: 22px;
-  opacity: 0.7;
+  height: 26px;          /* 统一视觉高度 */
+  width: auto;
+  max-width: 120px;     /* 防止 Oxford / UCL 这种超长 */
+  object-fit: contain;
+  opacity: 0.75;
   filter: grayscale(100%);
   transition: 0.3s ease;
 }
+
 
 .partner-logos img:hover {
   opacity: 1;
@@ -1573,3 +1581,38 @@ section,
   to { transform: translateX(-50%); }
 }
 
+/* === Partner logo carousel === */
+
+.partner-logos {
+  overflow: hidden;
+  width: 100%;
+  max-width: 320px;
+  margin: 6px auto 0;
+}
+
+.partner-logos .logo-strip {
+  display: flex;
+  width: max-content;
+  animation: partner-scroll 9s linear infinite;
+}
+
+.partner-logos .logo-set {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+
+.partner-logos img {
+  height: 24px;
+  width: auto;
+  max-width: 100px;
+  object-fit: contain;
+  opacity: 0.75;
+  filter: grayscale(100%);
+}
+
+/* smooth infinite loop */
+@keyframes partner-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
